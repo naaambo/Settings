@@ -27,6 +27,8 @@ namespace Settings
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static bool isLoaded = false;
+        private static List<WebConfigAppSetting> dirtyList = new List<WebConfigAppSetting>();
         public MainWindow()
         {
             InitializeComponent();
@@ -35,16 +37,7 @@ namespace Settings
 
         private void LoadData()
         {
-            // load the json configration file
-
-            // iterate through the XML settings file and/or web.config checking if the node exists (has to match the json conf file)
-
-            // render the data in the grid?table?treeview?
-
-            // ex. checkbox for boolean
-
-
-            var jsonData = @"{
+            const string jsonData = @"{
                 'appSettings': [
                     {
                         'key': 'aspnet: UseTaskFriendlySynchronizationContext',
@@ -169,7 +162,7 @@ namespace Settings
                 ]
             }";
 
-            WebConfig x = JsonConvert.DeserializeObject<WebConfig>(jsonData, new ConfigConverter());
+            WebConfig x = JsonConvert.DeserializeObject<WebConfig>(jsonData, new ConfigConverter());            
             // load in memory the web.config as xml and read the values from the file using the keys defined in the webConfig class
 
 
@@ -190,6 +183,7 @@ namespace Settings
             Dispatcher.Invoke(() =>
             {
                 MyDataGrid.ItemsSource = x.AppSettings;
+                isLoaded = true;
             });
 
         }
@@ -221,6 +215,10 @@ namespace Settings
             {
                 PropertyChangedEventHandler handler = PropertyChanged;
                 if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
+                if (isLoaded == true)
+                {
+                    dirtyList.Add(this);
+                }
             }
 
             public string Key
@@ -247,7 +245,6 @@ namespace Settings
                     }
                 }
             }
-
             public object Value
             {
                 get {
@@ -289,6 +286,16 @@ namespace Settings
             }
 
             public List<WebConfigAppSetting> AppSettings { get; set; }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var de = XDocument.Load(@"D:\Source\Connect\v1.9b\Task-Sam\OnBoardNextGeneration\OnBoard\Web.config").Element("configuration").Element("appSettings");
+            de.Descendants();
+            foreach (var node in de.Nodes())
+            {
+                Console.WriteLine(node);
+            }
         }
         }    
 }
