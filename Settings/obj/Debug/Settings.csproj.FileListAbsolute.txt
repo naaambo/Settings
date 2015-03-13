@@ -1,0 +1,15 @@
+c:\users\developer\documents\visual studio 2012\Projects\Settings\Settings\bin\Debug\Settings.exe.config
+c:\users\developer\documents\visual studio 2012\Projects\Settings\Settings\obj\Debug\Settings.csprojResolveAssemblyReference.cache
+c:\users\developer\documents\visual studio 2012\Projects\Settings\Settings\obj\Debug\MainWindow.baml
+c:\users\developer\documents\visual studio 2012\Projects\Settings\Settings\obj\Debug\MainWindow.g.cs
+c:\users\developer\documents\visual studio 2012\Projects\Settings\Settings\obj\Debug\App.g.cs
+c:\users\developer\documents\visual studio 2012\Projects\Settings\Settings\obj\Debug\Settings_MarkupCompile.cache
+c:\users\developer\documents\visual studio 2012\Projects\Settings\Settings\obj\Debug\Settings.g.resources
+c:\users\developer\documents\visual studio 2012\Projects\Settings\Settings\obj\Debug\Settings.Properties.Resources.resources
+c:\users\developer\documents\visual studio 2012\Projects\Settings\Settings\obj\Debug\Settings.csproj.GenerateResource.Cache
+c:\users\developer\documents\visual studio 2012\Projects\Settings\Settings\bin\Debug\Settings.exe
+c:\users\developer\documents\visual studio 2012\Projects\Settings\Settings\bin\Debug\Settings.pdb
+c:\users\developer\documents\visual studio 2012\Projects\Settings\Settings\bin\Debug\Newtonsoft.Json.dll
+c:\users\developer\documents\visual studio 2012\Projects\Settings\Settings\bin\Debug\Newtonsoft.Json.xml
+c:\users\developer\documents\visual studio 2012\Projects\Settings\Settings\obj\Debug\Settings.exe
+c:\users\developer\documents\visual studio 2012\Projects\Settings\Settings\obj\Debug\Settings.pdb
